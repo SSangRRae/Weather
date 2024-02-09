@@ -12,6 +12,16 @@
 		ECCA1A822B761CD800EB4BD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECCA1A812B761CD800EB4BD1 /* Assets.xcassets */; };
 		ECCA1A852B761CD800EB4BD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECCA1A832B761CD800EB4BD1 /* LaunchScreen.storyboard */; };
 		ECCA1A8E2B761D5E00EB4BD1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1A8D2B761D5E00EB4BD1 /* MainViewController.swift */; };
+		ECCA1A902B761DEC00EB4BD1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1A8F2B761DEC00EB4BD1 /* MainView.swift */; };
+		ECCA1A932B761EA500EB4BD1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ECCA1A922B761EA500EB4BD1 /* SnapKit */; };
+		ECCA1A962B761EB100EB4BD1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ECCA1A952B761EB100EB4BD1 /* Alamofire */; };
+		ECCA1A982B76243A00EB4BD1 /* MainSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1A972B76243A00EB4BD1 /* MainSection.swift */; };
+		ECCA1A9B2B76256F00EB4BD1 /* NowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1A9A2B76256F00EB4BD1 /* NowTableViewCell.swift */; };
+		ECCA1A9E2B76269700EB4BD1 /* FontDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1A9D2B76269700EB4BD1 /* FontDesign.swift */; };
+		ECCA1AA02B76270E00EB4BD1 /* ColorDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1A9F2B76270E00EB4BD1 /* ColorDesign.swift */; };
+		ECCA1AA32B7627A200EB4BD1 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AA22B7627A200EB4BD1 /* UIViewExtensions.swift */; };
+		ECCA1AA52B762AB100EB4BD1 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AA42B762AB100EB4BD1 /* UILabelExtensions.swift */; };
+		ECCA1AA72B762BB200EB4BD1 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AA62B762BB200EB4BD1 /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,14 @@
 		ECCA1A842B761CD800EB4BD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECCA1A862B761CD800EB4BD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECCA1A8D2B761D5E00EB4BD1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		ECCA1A8F2B761DEC00EB4BD1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		ECCA1A972B76243A00EB4BD1 /* MainSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSection.swift; sourceTree = "<group>"; };
+		ECCA1A9A2B76256F00EB4BD1 /* NowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowTableViewCell.swift; sourceTree = "<group>"; };
+		ECCA1A9D2B76269700EB4BD1 /* FontDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDesign.swift; sourceTree = "<group>"; };
+		ECCA1A9F2B76270E00EB4BD1 /* ColorDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDesign.swift; sourceTree = "<group>"; };
+		ECCA1AA22B7627A200EB4BD1 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		ECCA1AA42B762AB100EB4BD1 /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
+		ECCA1AA62B762BB200EB4BD1 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECCA1A932B761EA500EB4BD1 /* SnapKit in Frameworks */,
+				ECCA1A962B761EB100EB4BD1 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +74,10 @@
 		ECCA1A772B761CD600EB4BD1 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				ECCA1AA62B762BB200EB4BD1 /* Protocols.swift */,
+				ECCA1A9C2B76268100EB4BD1 /* Design */,
+				ECCA1AA12B76278F00EB4BD1 /* Extension */,
+				ECCA1A992B76255700EB4BD1 /* Now */,
 				ECCA1A8C2B761D5100EB4BD1 /* Main */,
 				ECCA1A782B761CD600EB4BD1 /* AppDelegate.swift */,
 				ECCA1A7A2B761CD600EB4BD1 /* SceneDelegate.swift */,
@@ -67,9 +91,37 @@
 		ECCA1A8C2B761D5100EB4BD1 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				ECCA1A972B76243A00EB4BD1 /* MainSection.swift */,
+				ECCA1A8F2B761DEC00EB4BD1 /* MainView.swift */,
 				ECCA1A8D2B761D5E00EB4BD1 /* MainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		ECCA1A992B76255700EB4BD1 /* Now */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA1A9A2B76256F00EB4BD1 /* NowTableViewCell.swift */,
+			);
+			path = Now;
+			sourceTree = "<group>";
+		};
+		ECCA1A9C2B76268100EB4BD1 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA1A9D2B76269700EB4BD1 /* FontDesign.swift */,
+				ECCA1A9F2B76270E00EB4BD1 /* ColorDesign.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		ECCA1AA12B76278F00EB4BD1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA1AA22B7627A200EB4BD1 /* UIViewExtensions.swift */,
+				ECCA1AA42B762AB100EB4BD1 /* UILabelExtensions.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +140,10 @@
 			dependencies = (
 			);
 			name = Weather;
+			packageProductDependencies = (
+				ECCA1A922B761EA500EB4BD1 /* SnapKit */,
+				ECCA1A952B761EB100EB4BD1 /* Alamofire */,
+			);
 			productName = Weather;
 			productReference = ECCA1A752B761CD600EB4BD1 /* Weather.app */;
 			productType = "com.apple.product-type.application";
@@ -116,6 +172,10 @@
 				Base,
 			);
 			mainGroup = ECCA1A6C2B761CD600EB4BD1;
+			packageReferences = (
+				ECCA1A912B761EA500EB4BD1 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				ECCA1A942B761EB100EB4BD1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = ECCA1A762B761CD600EB4BD1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,7 +203,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECCA1A8E2B761D5E00EB4BD1 /* MainViewController.swift in Sources */,
+				ECCA1A902B761DEC00EB4BD1 /* MainView.swift in Sources */,
+				ECCA1AA52B762AB100EB4BD1 /* UILabelExtensions.swift in Sources */,
+				ECCA1AA72B762BB200EB4BD1 /* Protocols.swift in Sources */,
 				ECCA1A792B761CD600EB4BD1 /* AppDelegate.swift in Sources */,
+				ECCA1A9E2B76269700EB4BD1 /* FontDesign.swift in Sources */,
+				ECCA1A982B76243A00EB4BD1 /* MainSection.swift in Sources */,
+				ECCA1AA02B76270E00EB4BD1 /* ColorDesign.swift in Sources */,
+				ECCA1A9B2B76256F00EB4BD1 /* NowTableViewCell.swift in Sources */,
+				ECCA1AA32B7627A200EB4BD1 /* UIViewExtensions.swift in Sources */,
 				ECCA1A7B2B761CD600EB4BD1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +433,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECCA1A912B761EA500EB4BD1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+		ECCA1A942B761EB100EB4BD1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECCA1A922B761EA500EB4BD1 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECCA1A912B761EA500EB4BD1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		ECCA1A952B761EB100EB4BD1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECCA1A942B761EB100EB4BD1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ECCA1A6D2B761CD600EB4BD1 /* Project object */;
 }
