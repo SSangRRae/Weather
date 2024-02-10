@@ -11,40 +11,36 @@ import SnapKit
 class NowTableViewCell: UITableViewCell {
     let cityLabel: UILabel = {
         let view = UILabel()
-        view.text = "Seoul"
         view.setTextColor()
-        view.font = .systemFont(ofSize: 25)
+        view.font = FontDesign.info.bold
         return view
     }()
     
     let tempLabel: UILabel = {
         let view = UILabel()
-        view.text = "5.9°"
         view.setTextColor()
-        view.font = .systemFont(ofSize: 60)
+        view.font = FontDesign.temp.light
         return view
     }()
     
     let descriptionLabel: UILabel = {
         let view = UILabel()
-        view.text = "맑음"
         view.setTextColor()
-        view.font = FontDesign.mid.light
+        view.font = FontDesign.info.light
         return view
     }()
     
     let maxMinTempLabel: UILabel = {
         let view = UILabel()
-        view.text = "최고: 7.0° | 최저: -4.2°"
         view.setTextColor()
-        view.font = FontDesign.big.light
+        view.font = FontDesign.info.light
         return view
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        contentView.backgroundColor = .black
+        contentView.setBackGroundColor()
         configureHierarchy()
         configureConstraints()
     }
@@ -62,8 +58,11 @@ extension NowTableViewCell: Configure {
         contentView.addSubview(maxMinTempLabel)
     }
     
-    func configureViews() {
-        
+    func configureViews(_ item: WeatherInfo) {
+        cityLabel.text = item.name
+        tempLabel.text = "\(item.main.temp)°"
+        descriptionLabel.text = item.weather[0].description
+        maxMinTempLabel.text = "최고: \(item.main.tempMax)° | 최저: \(item.main.tempMin)°"
     }
     
     func configureConstraints() {
@@ -83,7 +82,7 @@ extension NowTableViewCell: Configure {
             make.height.equalTo(22)
         }
         maxMinTempLabel.snp.makeConstraints { make in
-            make.top.equalTo(descriptionLabel.snp.bottom)
+            make.top.equalTo(descriptionLabel.snp.bottom).offset(8)
             make.centerX.equalTo(contentView)
             make.height.equalTo(22)
         }

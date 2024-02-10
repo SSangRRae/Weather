@@ -22,6 +22,13 @@
 		ECCA1AA32B7627A200EB4BD1 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AA22B7627A200EB4BD1 /* UIViewExtensions.swift */; };
 		ECCA1AA52B762AB100EB4BD1 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AA42B762AB100EB4BD1 /* UILabelExtensions.swift */; };
 		ECCA1AA72B762BB200EB4BD1 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AA62B762BB200EB4BD1 /* Protocols.swift */; };
+		ECCA1AAC2B77453400EB4BD1 /* ThreeTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AAB2B77453400EB4BD1 /* ThreeTimeTableViewCell.swift */; };
+		ECCA1AAE2B77464100EB4BD1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = ECCA1AAD2B77464100EB4BD1 /* .gitignore */; };
+		ECCA1AB02B77465400EB4BD1 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AAF2B77465400EB4BD1 /* APIKey.swift */; };
+		ECCA1AB32B7746A000EB4BD1 /* OpenWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AB22B7746A000EB4BD1 /* OpenWeatherManager.swift */; };
+		ECCA1AB52B77477F00EB4BD1 /* OpenWeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AB42B77477F00EB4BD1 /* OpenWeatherAPI.swift */; };
+		ECCA1AB82B7749E800EB4BD1 /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AB72B7749E800EB4BD1 /* WeatherInfo.swift */; };
+		ECCA1ABA2B774D5400EB4BD1 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AB92B774D5400EB4BD1 /* WeatherData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +47,13 @@
 		ECCA1AA22B7627A200EB4BD1 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		ECCA1AA42B762AB100EB4BD1 /* UILabelExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
 		ECCA1AA62B762BB200EB4BD1 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		ECCA1AAB2B77453400EB4BD1 /* ThreeTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeTimeTableViewCell.swift; sourceTree = "<group>"; };
+		ECCA1AAD2B77464100EB4BD1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		ECCA1AAF2B77465400EB4BD1 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		ECCA1AB22B7746A000EB4BD1 /* OpenWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherManager.swift; sourceTree = "<group>"; };
+		ECCA1AB42B77477F00EB4BD1 /* OpenWeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherAPI.swift; sourceTree = "<group>"; };
+		ECCA1AB72B7749E800EB4BD1 /* WeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
+		ECCA1AB92B774D5400EB4BD1 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 		ECCA1A6C2B761CD600EB4BD1 = {
 			isa = PBXGroup;
 			children = (
+				ECCA1AAD2B77464100EB4BD1 /* .gitignore */,
 				ECCA1A772B761CD600EB4BD1 /* Weather */,
 				ECCA1A762B761CD600EB4BD1 /* Products */,
 			);
@@ -74,11 +89,15 @@
 		ECCA1A772B761CD600EB4BD1 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				ECCA1AAF2B77465400EB4BD1 /* APIKey.swift */,
 				ECCA1AA62B762BB200EB4BD1 /* Protocols.swift */,
 				ECCA1A9C2B76268100EB4BD1 /* Design */,
+				ECCA1AB62B7749D600EB4BD1 /* Data */,
+				ECCA1AB12B77468D00EB4BD1 /* Network */,
 				ECCA1AA12B76278F00EB4BD1 /* Extension */,
-				ECCA1A992B76255700EB4BD1 /* Now */,
 				ECCA1A8C2B761D5100EB4BD1 /* Main */,
+				ECCA1A992B76255700EB4BD1 /* Now */,
+				ECCA1AAA2B77450E00EB4BD1 /* ThreeTime */,
 				ECCA1A782B761CD600EB4BD1 /* AppDelegate.swift */,
 				ECCA1A7A2B761CD600EB4BD1 /* SceneDelegate.swift */,
 				ECCA1A812B761CD800EB4BD1 /* Assets.xcassets */,
@@ -122,6 +141,32 @@
 				ECCA1AA42B762AB100EB4BD1 /* UILabelExtensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		ECCA1AAA2B77450E00EB4BD1 /* ThreeTime */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA1AAB2B77453400EB4BD1 /* ThreeTimeTableViewCell.swift */,
+			);
+			path = ThreeTime;
+			sourceTree = "<group>";
+		};
+		ECCA1AB12B77468D00EB4BD1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA1AB42B77477F00EB4BD1 /* OpenWeatherAPI.swift */,
+				ECCA1AB22B7746A000EB4BD1 /* OpenWeatherManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		ECCA1AB62B7749D600EB4BD1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA1AB92B774D5400EB4BD1 /* WeatherData.swift */,
+				ECCA1AB72B7749E800EB4BD1 /* WeatherInfo.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECCA1A852B761CD800EB4BD1 /* LaunchScreen.storyboard in Resources */,
+				ECCA1AAE2B77464100EB4BD1 /* .gitignore in Resources */,
 				ECCA1A822B761CD800EB4BD1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,15 +249,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECCA1A8E2B761D5E00EB4BD1 /* MainViewController.swift in Sources */,
+				ECCA1AAC2B77453400EB4BD1 /* ThreeTimeTableViewCell.swift in Sources */,
 				ECCA1A902B761DEC00EB4BD1 /* MainView.swift in Sources */,
 				ECCA1AA52B762AB100EB4BD1 /* UILabelExtensions.swift in Sources */,
 				ECCA1AA72B762BB200EB4BD1 /* Protocols.swift in Sources */,
 				ECCA1A792B761CD600EB4BD1 /* AppDelegate.swift in Sources */,
 				ECCA1A9E2B76269700EB4BD1 /* FontDesign.swift in Sources */,
 				ECCA1A982B76243A00EB4BD1 /* MainSection.swift in Sources */,
+				ECCA1AB82B7749E800EB4BD1 /* WeatherInfo.swift in Sources */,
 				ECCA1AA02B76270E00EB4BD1 /* ColorDesign.swift in Sources */,
+				ECCA1AB32B7746A000EB4BD1 /* OpenWeatherManager.swift in Sources */,
 				ECCA1A9B2B76256F00EB4BD1 /* NowTableViewCell.swift in Sources */,
+				ECCA1AB52B77477F00EB4BD1 /* OpenWeatherAPI.swift in Sources */,
+				ECCA1ABA2B774D5400EB4BD1 /* WeatherData.swift in Sources */,
 				ECCA1AA32B7627A200EB4BD1 /* UIViewExtensions.swift in Sources */,
+				ECCA1AB02B77465400EB4BD1 /* APIKey.swift in Sources */,
 				ECCA1A7B2B761CD600EB4BD1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,8 @@ enum FontDesign: CGFloat {
     case mid
     case big
     case biggest
+    case info = 20
+    case temp = 60
     
     var light: UIFont {
         return UIFont.systemFont(ofSize: self.rawValue)

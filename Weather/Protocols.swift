@@ -10,6 +10,6 @@ import UIKit
 @objc
 protocol Configure {
     func configureHierarchy()
-    func configureViews()
+    @objc optional func configureViews()
     func configureConstraints()
 }

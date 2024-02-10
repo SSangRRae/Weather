@@ -7,10 +7,22 @@
 
 import UIKit
 
-enum MainSection {
+enum MainSection: CaseIterable {
     case now
-    case threeDays
-    case fiveDays
+    case threeTime
+    case fiveDay
     case location
     case etc
+    
+    var numberOfRows: Int {
+        switch self {
+        case .now, .threeTime: 1
+        case .fiveDay:
+            1
+        case .location:
+            1
+        case .etc:
+            1
+        }
+    }
 }
