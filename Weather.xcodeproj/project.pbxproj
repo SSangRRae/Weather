@@ -29,6 +29,9 @@
 		ECCA1AB52B77477F00EB4BD1 /* OpenWeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AB42B77477F00EB4BD1 /* OpenWeatherAPI.swift */; };
 		ECCA1AB82B7749E800EB4BD1 /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AB72B7749E800EB4BD1 /* WeatherInfo.swift */; };
 		ECCA1ABA2B774D5400EB4BD1 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AB92B774D5400EB4BD1 /* WeatherData.swift */; };
+		ECCA1ABC2B77513000EB4BD1 /* ThreeTimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1ABB2B77513000EB4BD1 /* ThreeTimeCollectionViewCell.swift */; };
+		ECCA1ABE2B7766F900EB4BD1 /* ForecastWeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1ABD2B7766F900EB4BD1 /* ForecastWeatherInfo.swift */; };
+		ECCA1AC12B776B0F00EB4BD1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ECCA1AC02B776B0F00EB4BD1 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,8 @@
 		ECCA1AB42B77477F00EB4BD1 /* OpenWeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherAPI.swift; sourceTree = "<group>"; };
 		ECCA1AB72B7749E800EB4BD1 /* WeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
 		ECCA1AB92B774D5400EB4BD1 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		ECCA1ABB2B77513000EB4BD1 /* ThreeTimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeTimeCollectionViewCell.swift; sourceTree = "<group>"; };
+		ECCA1ABD2B7766F900EB4BD1 /* ForecastWeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeatherInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECCA1AC12B776B0F00EB4BD1 /* Kingfisher in Frameworks */,
 				ECCA1A932B761EA500EB4BD1 /* SnapKit in Frameworks */,
 				ECCA1A962B761EB100EB4BD1 /* Alamofire in Frameworks */,
 			);
@@ -147,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				ECCA1AAB2B77453400EB4BD1 /* ThreeTimeTableViewCell.swift */,
+				ECCA1ABB2B77513000EB4BD1 /* ThreeTimeCollectionViewCell.swift */,
 			);
 			path = ThreeTime;
 			sourceTree = "<group>";
@@ -165,6 +172,7 @@
 			children = (
 				ECCA1AB92B774D5400EB4BD1 /* WeatherData.swift */,
 				ECCA1AB72B7749E800EB4BD1 /* WeatherInfo.swift */,
+				ECCA1ABD2B7766F900EB4BD1 /* ForecastWeatherInfo.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -188,6 +196,7 @@
 			packageProductDependencies = (
 				ECCA1A922B761EA500EB4BD1 /* SnapKit */,
 				ECCA1A952B761EB100EB4BD1 /* Alamofire */,
+				ECCA1AC02B776B0F00EB4BD1 /* Kingfisher */,
 			);
 			productName = Weather;
 			productReference = ECCA1A752B761CD600EB4BD1 /* Weather.app */;
@@ -220,6 +229,7 @@
 			packageReferences = (
 				ECCA1A912B761EA500EB4BD1 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				ECCA1A942B761EB100EB4BD1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				ECCA1ABF2B776B0F00EB4BD1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = ECCA1A762B761CD600EB4BD1 /* Products */;
 			projectDirPath = "";
@@ -259,11 +269,13 @@
 				ECCA1AB82B7749E800EB4BD1 /* WeatherInfo.swift in Sources */,
 				ECCA1AA02B76270E00EB4BD1 /* ColorDesign.swift in Sources */,
 				ECCA1AB32B7746A000EB4BD1 /* OpenWeatherManager.swift in Sources */,
+				ECCA1ABE2B7766F900EB4BD1 /* ForecastWeatherInfo.swift in Sources */,
 				ECCA1A9B2B76256F00EB4BD1 /* NowTableViewCell.swift in Sources */,
 				ECCA1AB52B77477F00EB4BD1 /* OpenWeatherAPI.swift in Sources */,
 				ECCA1ABA2B774D5400EB4BD1 /* WeatherData.swift in Sources */,
 				ECCA1AA32B7627A200EB4BD1 /* UIViewExtensions.swift in Sources */,
 				ECCA1AB02B77465400EB4BD1 /* APIKey.swift in Sources */,
+				ECCA1ABC2B77513000EB4BD1 /* ThreeTimeCollectionViewCell.swift in Sources */,
 				ECCA1A7B2B761CD600EB4BD1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +515,14 @@
 				minimumVersion = 5.8.1;
 			};
 		};
+		ECCA1ABF2B776B0F00EB4BD1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -515,6 +535,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ECCA1A942B761EB100EB4BD1 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		ECCA1AC02B776B0F00EB4BD1 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECCA1ABF2B776B0F00EB4BD1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

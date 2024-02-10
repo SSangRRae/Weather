@@ -12,8 +12,8 @@ class OpenWeatherManager {
     static let shared = OpenWeatherManager()
     private init() {}
     
-    func fetchToOpenWeather(api: OpenWeatherAPI, completionHandler: @escaping (WeatherInfo) -> Void) {
-        AF.request(api.url, method: api.method, parameters: api.params).responseDecodable(of: WeatherInfo.self) { response in
+    func fetchToOpenWeather<T: Decodable>(api: OpenWeatherAPI, type: T.Type, completionHandler: @escaping (T) -> Void) {
+        AF.request(api.url, method: api.method, parameters: api.params).responseDecodable(of: T.self) { response in
             switch response.result {
             case .success(let success):
                 dump(success)

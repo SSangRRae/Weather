@@ -12,4 +12,5 @@ class WeatherData {
     private init() {}
     
     var nowWeather: WeatherInfo?
+    var forecastWeather: ForecastWeatherInfo?
 }

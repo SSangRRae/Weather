@@ -60,9 +60,9 @@ extension NowTableViewCell: Configure {
     
     func configureViews(_ item: WeatherInfo) {
         cityLabel.text = item.name
-        tempLabel.text = "\(item.main.temp)°"
+        tempLabel.text = tempText(temp: item.main.temp)
         descriptionLabel.text = item.weather[0].description
-        maxMinTempLabel.text = "최고: \(item.main.tempMax)° | 최저: \(item.main.tempMin)°"
+        maxMinTempLabel.text = "최고: \(tempText(temp: item.main.tempMax)) | 최저: \(tempText(temp: item.main.tempMin))"
     }
     
     func configureConstraints() {
@@ -84,7 +84,7 @@ extension NowTableViewCell: Configure {
         maxMinTempLabel.snp.makeConstraints { make in
             make.top.equalTo(descriptionLabel.snp.bottom).offset(8)
             make.centerX.equalTo(contentView)
-            make.height.equalTo(22)
+            make.bottom.equalTo(contentView.snp.bottom).inset(8)
         }
     }
 }

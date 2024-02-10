@@ -12,6 +12,13 @@ class ThreeTimeTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        collectionView.setBackGroundColor()
+        contentView.addSubview(collectionView)
+        collectionView.snp.makeConstraints { make in
+            make.width.equalTo(UIScreen.main.bounds.width)
+            make.height.equalTo(150)
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -20,13 +27,17 @@ class ThreeTimeTableViewCell: UITableViewCell {
 }
 
 extension ThreeTimeTableViewCell {
-    static func setUICollectionViewLayout()  -> UICollectionViewLayout {
+    static func setUICollectionViewLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
+        let space: CGFloat = 8
+        let deviceWidth = UIScreen.main.bounds.width
+        let cellWidth = deviceWidth - (space * 6)
         
-        layout.itemSize = CGSize(width: 50, height: 200)
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 8
+        layout.itemSize = CGSize(width: cellWidth/5, height: 150)
+        layout.sectionInset = UIEdgeInsets(top: space, left: space, bottom: space, right: space)
+        layout.minimumLineSpacing = space
+        layout.minimumInteritemSpacing = space
+        layout.scrollDirection = .horizontal
         
         return layout
     }

@@ -10,6 +10,7 @@ import Alamofire
 
 enum OpenWeatherAPI {
     case now(cityID: String)
+    case forecast(cityID: String)
     
     var baseURL: String {
         return "https://api.openweathermap.org/data/2.5/"
@@ -18,6 +19,7 @@ enum OpenWeatherAPI {
     var url: String {
         switch self {
         case .now: baseURL + "weather"
+        case .forecast: baseURL + "forecast"
         }
     }
     
@@ -27,7 +29,7 @@ enum OpenWeatherAPI {
     
     var params: Parameters {
         switch self {
-        case .now(let cityID): ["appid": APIKey.openWeather, "lang": "kr", "units": "metric", "id": cityID]
+        case .now(let cityID), .forecast(let cityID): ["appid": APIKey.openWeather, "lang": "kr", "units": "metric", "id": cityID]
         }
     }
 }

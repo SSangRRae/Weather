@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class MainView: UIView {
-    let tableView = UITableView()
+    let tableView = UITableView(frame: .zero, style: .grouped)
     
     override init(frame: CGRect) {
         super.init(frame: frame)

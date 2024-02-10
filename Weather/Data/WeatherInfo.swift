@@ -8,11 +8,21 @@
 import Foundation
 
 struct WeatherInfo: Decodable {
-    let name: String
+    let name: String?
     let weather: [Weather]
     let main: Main
     let wind: Wind
     let clouds: Clouds
+    let dateTime: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case weather
+        case main
+        case wind
+        case clouds
+        case dateTime = "dt_txt"
+    }
 }
 
 struct Weather: Decodable {
