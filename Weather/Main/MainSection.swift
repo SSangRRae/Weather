@@ -37,7 +37,7 @@ enum MainSection: CaseIterable {
         case .threeTime: 150
         case .fiveDay: 50
         case .location: 200
-        case .etc: 100
+        case .etc: UIScreen.main.bounds.width
         }
     }
 }

@@ -35,6 +35,9 @@
 		ECCA1AC42B77772A00EB4BD1 /* FiveDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AC32B77772A00EB4BD1 /* FiveDayTableViewCell.swift */; };
 		ECCA1AC62B7897F000EB4BD1 /* DateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AC52B7897F000EB4BD1 /* DateFunctions.swift */; };
 		ECCA1AC92B789C2300EB4BD1 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AC82B789C2300EB4BD1 /* LocationTableViewCell.swift */; };
+		ECCA1ACC2B789EF200EB4BD1 /* EtcTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1ACB2B789EF200EB4BD1 /* EtcTableViewCell.swift */; };
+		ECCA1ACE2B789F8300EB4BD1 /* EtcCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1ACD2B789F8300EB4BD1 /* EtcCollectionViewCell.swift */; };
+		ECCA1AD12B78A7ED00EB4BD1 /* EtcSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AD02B78A7ED00EB4BD1 /* EtcSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +68,9 @@
 		ECCA1AC32B77772A00EB4BD1 /* FiveDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayTableViewCell.swift; sourceTree = "<group>"; };
 		ECCA1AC52B7897F000EB4BD1 /* DateFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFunctions.swift; sourceTree = "<group>"; };
 		ECCA1AC82B789C2300EB4BD1 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		ECCA1ACB2B789EF200EB4BD1 /* EtcTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcTableViewCell.swift; sourceTree = "<group>"; };
+		ECCA1ACD2B789F8300EB4BD1 /* EtcCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcCollectionViewCell.swift; sourceTree = "<group>"; };
+		ECCA1AD02B78A7ED00EB4BD1 /* EtcSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 				ECCA1AAA2B77450E00EB4BD1 /* ThreeTime */,
 				ECCA1AC22B77770900EB4BD1 /* FiveDay */,
 				ECCA1AC72B789BED00EB4BD1 /* Location */,
+				ECCA1ACA2B789EE300EB4BD1 /* Etc */,
 				ECCA1A782B761CD600EB4BD1 /* AppDelegate.swift */,
 				ECCA1A7A2B761CD600EB4BD1 /* SceneDelegate.swift */,
 				ECCA1A812B761CD800EB4BD1 /* Assets.xcassets */,
@@ -202,6 +209,16 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
+		ECCA1ACA2B789EE300EB4BD1 /* Etc */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA1AD02B78A7ED00EB4BD1 /* EtcSection.swift */,
+				ECCA1ACB2B789EF200EB4BD1 /* EtcTableViewCell.swift */,
+				ECCA1ACD2B789F8300EB4BD1 /* EtcCollectionViewCell.swift */,
+			);
+			path = Etc;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,10 +301,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECCA1A8E2B761D5E00EB4BD1 /* MainViewController.swift in Sources */,
+				ECCA1ACE2B789F8300EB4BD1 /* EtcCollectionViewCell.swift in Sources */,
 				ECCA1AAC2B77453400EB4BD1 /* ThreeTimeTableViewCell.swift in Sources */,
 				ECCA1A902B761DEC00EB4BD1 /* MainView.swift in Sources */,
 				ECCA1AA52B762AB100EB4BD1 /* UILabelExtensions.swift in Sources */,
 				ECCA1AA72B762BB200EB4BD1 /* Protocols.swift in Sources */,
+				ECCA1ACC2B789EF200EB4BD1 /* EtcTableViewCell.swift in Sources */,
 				ECCA1A792B761CD600EB4BD1 /* AppDelegate.swift in Sources */,
 				ECCA1A9E2B76269700EB4BD1 /* FontDesign.swift in Sources */,
 				ECCA1A982B76243A00EB4BD1 /* MainSection.swift in Sources */,
@@ -305,6 +324,7 @@
 				ECCA1ABC2B77513000EB4BD1 /* ThreeTimeCollectionViewCell.swift in Sources */,
 				ECCA1AC62B7897F000EB4BD1 /* DateFunctions.swift in Sources */,
 				ECCA1A7B2B761CD600EB4BD1 /* SceneDelegate.swift in Sources */,
+				ECCA1AD12B78A7ED00EB4BD1 /* EtcSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

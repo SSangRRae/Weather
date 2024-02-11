@@ -19,6 +19,7 @@ class LocationTableViewCell: UITableViewCell {
             make.horizontalEdges.equalToSuperview().inset(16)
             make.verticalEdges.equalToSuperview()
         }
+        mapView.overrideUserInterfaceStyle = .dark
     }
     
     required init?(coder: NSCoder) {

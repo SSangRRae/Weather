@@ -12,14 +12,13 @@ class OpenWeatherManager {
     static let shared = OpenWeatherManager()
     private init() {}
     
-    func fetchToOpenWeather<T: Decodable>(api: OpenWeatherAPI, type: T.Type, completionHandler: @escaping (T) -> Void) {
+    func fetchToOpenWeather<T: Decodable>(api: OpenWeatherAPI, type: T.Type, completionHandler: @escaping (T?, Error?) -> Void) {
         AF.request(api.url, method: api.method, parameters: api.params).responseDecodable(of: T.self) { response in
             switch response.result {
             case .success(let success):
-                dump(success)
-                completionHandler(success)
+                completionHandler(success, nil)
             case .failure(let failure):
-                print(failure)
+                completionHandler(nil, failure)
             }
         }
     }
