@@ -32,6 +32,8 @@
 		ECCA1ABC2B77513000EB4BD1 /* ThreeTimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1ABB2B77513000EB4BD1 /* ThreeTimeCollectionViewCell.swift */; };
 		ECCA1ABE2B7766F900EB4BD1 /* ForecastWeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1ABD2B7766F900EB4BD1 /* ForecastWeatherInfo.swift */; };
 		ECCA1AC12B776B0F00EB4BD1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ECCA1AC02B776B0F00EB4BD1 /* Kingfisher */; };
+		ECCA1AC42B77772A00EB4BD1 /* FiveDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AC32B77772A00EB4BD1 /* FiveDayTableViewCell.swift */; };
+		ECCA1AC62B7897F000EB4BD1 /* DateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AC52B7897F000EB4BD1 /* DateFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		ECCA1AB92B774D5400EB4BD1 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		ECCA1ABB2B77513000EB4BD1 /* ThreeTimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeTimeCollectionViewCell.swift; sourceTree = "<group>"; };
 		ECCA1ABD2B7766F900EB4BD1 /* ForecastWeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeatherInfo.swift; sourceTree = "<group>"; };
+		ECCA1AC32B77772A00EB4BD1 /* FiveDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveDayTableViewCell.swift; sourceTree = "<group>"; };
+		ECCA1AC52B7897F000EB4BD1 /* DateFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 				ECCA1A8C2B761D5100EB4BD1 /* Main */,
 				ECCA1A992B76255700EB4BD1 /* Now */,
 				ECCA1AAA2B77450E00EB4BD1 /* ThreeTime */,
+				ECCA1AC22B77770900EB4BD1 /* FiveDay */,
 				ECCA1A782B761CD600EB4BD1 /* AppDelegate.swift */,
 				ECCA1A7A2B761CD600EB4BD1 /* SceneDelegate.swift */,
 				ECCA1A812B761CD800EB4BD1 /* Assets.xcassets */,
@@ -173,8 +178,17 @@
 				ECCA1AB92B774D5400EB4BD1 /* WeatherData.swift */,
 				ECCA1AB72B7749E800EB4BD1 /* WeatherInfo.swift */,
 				ECCA1ABD2B7766F900EB4BD1 /* ForecastWeatherInfo.swift */,
+				ECCA1AC52B7897F000EB4BD1 /* DateFunctions.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		ECCA1AC22B77770900EB4BD1 /* FiveDay */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA1AC32B77772A00EB4BD1 /* FiveDayTableViewCell.swift */,
+			);
+			path = FiveDay;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,8 +288,10 @@
 				ECCA1AB52B77477F00EB4BD1 /* OpenWeatherAPI.swift in Sources */,
 				ECCA1ABA2B774D5400EB4BD1 /* WeatherData.swift in Sources */,
 				ECCA1AA32B7627A200EB4BD1 /* UIViewExtensions.swift in Sources */,
+				ECCA1AC42B77772A00EB4BD1 /* FiveDayTableViewCell.swift in Sources */,
 				ECCA1AB02B77465400EB4BD1 /* APIKey.swift in Sources */,
 				ECCA1ABC2B77513000EB4BD1 /* ThreeTimeCollectionViewCell.swift in Sources */,
+				ECCA1AC62B7897F000EB4BD1 /* DateFunctions.swift in Sources */,
 				ECCA1A7B2B761CD600EB4BD1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

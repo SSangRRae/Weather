@@ -13,4 +13,5 @@ class WeatherData {
     
     var nowWeather: WeatherInfo?
     var forecastWeather: ForecastWeatherInfo?
+    var fiveDayWeather: [WeatherInfo] = []
 }

@@ -84,7 +84,7 @@ extension NowTableViewCell: Configure {
         maxMinTempLabel.snp.makeConstraints { make in
             make.top.equalTo(descriptionLabel.snp.bottom).offset(8)
             make.centerX.equalTo(contentView)
-            make.bottom.equalTo(contentView.snp.bottom).inset(8)
+            make.height.equalTo(22)
         }
     }
 }

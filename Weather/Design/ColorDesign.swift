@@ -13,8 +13,8 @@ enum ColorDesign {
     
     var draw: UIColor {
         switch self {
-        case .background: UIColor.black
-        case .text: UIColor.white
+        case .background: UIColor.white
+        case .text: UIColor.black
         }
     }
 }

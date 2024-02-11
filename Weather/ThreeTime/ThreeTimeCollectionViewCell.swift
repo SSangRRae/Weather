@@ -49,7 +49,7 @@ extension ThreeTimeCollectionViewCell: Configure {
     func configureViews(_ item: WeatherInfo) {
         let url = URL(string: "https://openweathermap.org/img/wn/\(item.weather[0].icon)@2x.png")
         if let dateTime = item.dateTime {
-            timeLabel.text = dateTimeToHour(dateTime: dateTime)
+            timeLabel.text = "\(DateFunctions().dateTimeFormattingToHour(dateTime))시"
         }
         iconImage.kf.setImage(with: url)
         tempLabel.text = tempText(temp: item.main.temp)

@@ -31,7 +31,8 @@ extension MainView: Configure {
     
     func configureViews() {
         setBackGroundColor()
-        tableView.backgroundColor = .black
+        tableView.backgroundColor = ColorDesign.background.draw
+        tableView.separatorStyle = .none
     }
     
     func configureConstraints() {

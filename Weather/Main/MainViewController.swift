@@ -16,11 +16,12 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .black
+
         mainView.tableView.delegate = self
         mainView.tableView.dataSource = self
         mainView.tableView.register(NowTableViewCell.self, forCellReuseIdentifier: "now")
         mainView.tableView.register(ThreeTimeTableViewCell.self, forCellReuseIdentifier: "threeTime")
+        mainView.tableView.register(FiveDayTableViewCell.self, forCellReuseIdentifier: "fiveDay")
         
         requestToOpenWeather()
     }
@@ -28,11 +29,19 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        2
+        3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MainSection.allCases[section].numberOfRows
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return MainSection.allCases[section].headerTitle
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return MainSection.allCases[indexPath.section].heightForRow
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,12 +51,16 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.configureViews(item)
             }
             return cell
-        } else {
+        } else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "threeTime", for: indexPath) as! ThreeTimeTableViewCell
             cell.collectionView.dataSource = self
             cell.collectionView.delegate = self
             cell.collectionView.register(ThreeTimeCollectionViewCell.self, forCellWithReuseIdentifier: "threeTimeCol")
             cell.collectionView.reloadData()
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "fiveDay", for: indexPath) as! FiveDayTableViewCell
+            cell.configureViews(WeatherData.shared.fiveDayWeather[indexPath.row])
             return cell
         }
     }
@@ -55,7 +68,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        12
+        guard let item = WeatherData.shared.forecastWeather else {
+            return 0
+        }
+        return item.list.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -84,7 +100,23 @@ extension MainViewController {
         }
         
         group.notify(queue: .main) {
+            self.fiveDayData()
             self.mainView.tableView.reloadData()
+        }
+    }
+    
+    func fiveDayData() {
+        guard let data = WeatherData.shared.forecastWeather else {
+            return
+        }
+        for list in data.list {
+            guard let date = list.dateTime else {
+                return
+            }
+            let hour = DateFunctions().dateTimeFormattingToHour(date)
+            if hour == "00" {
+                WeatherData.shared.fiveDayWeather.append(list)
+            }
         }
     }
 }
