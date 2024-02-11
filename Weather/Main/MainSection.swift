@@ -16,12 +16,8 @@ enum MainSection: CaseIterable {
     
     var numberOfRows: Int {
         switch self {
-        case .now, .threeTime: 1
         case .fiveDay: WeatherData.shared.fiveDayWeather.count
-        case .location:
-            1
-        case .etc:
-            1
+        default : 1
         }
     }
     
@@ -40,7 +36,7 @@ enum MainSection: CaseIterable {
         case .now: 200
         case .threeTime: 150
         case .fiveDay: 50
-        case .location: 100
+        case .location: 200
         case .etc: 100
         }
     }

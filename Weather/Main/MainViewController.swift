@@ -22,6 +22,7 @@ class MainViewController: UIViewController {
         mainView.tableView.register(NowTableViewCell.self, forCellReuseIdentifier: "now")
         mainView.tableView.register(ThreeTimeTableViewCell.self, forCellReuseIdentifier: "threeTime")
         mainView.tableView.register(FiveDayTableViewCell.self, forCellReuseIdentifier: "fiveDay")
+        mainView.tableView.register(LocationTableViewCell.self, forCellReuseIdentifier: "location")
         
         requestToOpenWeather()
     }
@@ -29,7 +30,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        3
+        4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,9 +59,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             cell.collectionView.register(ThreeTimeCollectionViewCell.self, forCellWithReuseIdentifier: "threeTimeCol")
             cell.collectionView.reloadData()
             return cell
-        } else {
+        } else if indexPath.section == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "fiveDay", for: indexPath) as! FiveDayTableViewCell
             cell.configureViews(WeatherData.shared.fiveDayWeather[indexPath.row])
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "location", for: indexPath) as! LocationTableViewCell
             return cell
         }
     }
