@@ -49,7 +49,7 @@ extension MainView: Configure {
         setBackGroundColor()
         tableView.backgroundColor = ColorDesign.background.draw
         tableView.separatorStyle = .none
-        footer.backgroundColor = .white
+        footer.backgroundColor = .clear
     }
     
     func configureConstraints() {
@@ -59,7 +59,7 @@ extension MainView: Configure {
         footer.snp.makeConstraints { make in
             make.bottom.equalTo(safeAreaLayoutGuide)
             make.horizontalEdges.equalTo(safeAreaLayoutGuide)
-            make.height.equalTo(60)
+            make.height.equalTo(50)
         }
         mapButton.snp.makeConstraints { make in
             make.leading.equalTo(footer.snp.leading).offset(24)

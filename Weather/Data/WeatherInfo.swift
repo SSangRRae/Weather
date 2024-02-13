@@ -14,6 +14,8 @@ struct WeatherInfo: Decodable {
     let wind: Wind
     let clouds: Clouds
     let dateTime: String?
+    let coord: Coord?
+    let city: City?
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -22,6 +24,8 @@ struct WeatherInfo: Decodable {
         case wind
         case clouds
         case dateTime = "dt_txt"
+        case coord
+        case city
     }
 }
 

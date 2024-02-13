@@ -10,7 +10,7 @@ import UIKit
 class EtcCollectionViewCell: UICollectionViewCell {
     let titleLabel: UILabel = {
         let view = UILabel()
-        view.font = FontDesign.mid.light
+        view.font = FontDesign.biggest.light
         return view
     }()
     
@@ -22,6 +22,9 @@ class EtcCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderWidth = 1
+        self.layer.cornerRadius = 10
         configureHierarchy()
         configureConstraints()
     }
@@ -44,13 +47,13 @@ extension EtcCollectionViewCell: Configure {
     
     func configureConstraints() {
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(snp.top)
-            make.horizontalEdges.equalToSuperview().inset(8)
+            make.top.equalTo(snp.top).offset(16)
+            make.horizontalEdges.equalToSuperview().inset(16)
             make.height.equalTo(22)
         }
         valueLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(8)
-            make.horizontalEdges.equalToSuperview().inset(8)
+            make.horizontalEdges.equalToSuperview().inset(16)
         }
     }
 }

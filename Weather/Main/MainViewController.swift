@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        mainView.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
         navigationController?.navigationBar.isHidden = true
         requestToOpenWeather(cityID: cityID)
     }
@@ -68,6 +69,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else if indexPath.section == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "location", for: indexPath) as! LocationTableViewCell
+            cell.configureViews()
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "etc", for: indexPath) as! EtcTableViewCell
