@@ -39,6 +39,10 @@
 		ECCA1ACE2B789F8300EB4BD1 /* EtcCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1ACD2B789F8300EB4BD1 /* EtcCollectionViewCell.swift */; };
 		ECCA1AD12B78A7ED00EB4BD1 /* EtcSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AD02B78A7ED00EB4BD1 /* EtcSection.swift */; };
 		ECCA1AD72B7B463200EB4BD1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AD62B7B463200EB4BD1 /* SearchViewController.swift */; };
+		ECCA1ADB2B7B4B0B00EB4BD1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1ADA2B7B4B0B00EB4BD1 /* SearchView.swift */; };
+		ECCA1ADD2B7B4D0D00EB4BD1 /* City.json in Resources */ = {isa = PBXBuildFile; fileRef = ECCA1ADC2B7B4D0D00EB4BD1 /* City.json */; };
+		ECCA1ADF2B7B4D4600EB4BD1 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1ADE2B7B4D4600EB4BD1 /* City.swift */; };
+		ECCA1AE52B7B505C00EB4BD1 /* CityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AE42B7B505C00EB4BD1 /* CityData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +77,10 @@
 		ECCA1ACD2B789F8300EB4BD1 /* EtcCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcCollectionViewCell.swift; sourceTree = "<group>"; };
 		ECCA1AD02B78A7ED00EB4BD1 /* EtcSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcSection.swift; sourceTree = "<group>"; };
 		ECCA1AD62B7B463200EB4BD1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		ECCA1ADA2B7B4B0B00EB4BD1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		ECCA1ADC2B7B4D0D00EB4BD1 /* City.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = City.json; sourceTree = "<group>"; };
+		ECCA1ADE2B7B4D4600EB4BD1 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		ECCA1AE42B7B505C00EB4BD1 /* CityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +233,10 @@
 		ECCA1AD52B7B461700EB4BD1 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				ECCA1ADC2B7B4D0D00EB4BD1 /* City.json */,
+				ECCA1ADE2B7B4D4600EB4BD1 /* City.swift */,
+				ECCA1AE42B7B505C00EB4BD1 /* CityData.swift */,
+				ECCA1ADA2B7B4B0B00EB4BD1 /* SearchView.swift */,
 				ECCA1AD62B7B463200EB4BD1 /* SearchViewController.swift */,
 			);
 			path = Search;
@@ -301,6 +313,7 @@
 				ECCA1A852B761CD800EB4BD1 /* LaunchScreen.storyboard in Resources */,
 				ECCA1AAE2B77464100EB4BD1 /* .gitignore in Resources */,
 				ECCA1A822B761CD800EB4BD1 /* Assets.xcassets in Resources */,
+				ECCA1ADD2B7B4D0D00EB4BD1 /* City.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,8 +330,10 @@
 				ECCA1A902B761DEC00EB4BD1 /* MainView.swift in Sources */,
 				ECCA1AA52B762AB100EB4BD1 /* UILabelExtensions.swift in Sources */,
 				ECCA1AA72B762BB200EB4BD1 /* Protocols.swift in Sources */,
+				ECCA1ADF2B7B4D4600EB4BD1 /* City.swift in Sources */,
 				ECCA1ACC2B789EF200EB4BD1 /* EtcTableViewCell.swift in Sources */,
 				ECCA1A792B761CD600EB4BD1 /* AppDelegate.swift in Sources */,
+				ECCA1AE52B7B505C00EB4BD1 /* CityData.swift in Sources */,
 				ECCA1AD72B7B463200EB4BD1 /* SearchViewController.swift in Sources */,
 				ECCA1A9E2B76269700EB4BD1 /* FontDesign.swift in Sources */,
 				ECCA1A982B76243A00EB4BD1 /* MainSection.swift in Sources */,
@@ -330,6 +345,7 @@
 				ECCA1A9B2B76256F00EB4BD1 /* NowTableViewCell.swift in Sources */,
 				ECCA1AB52B77477F00EB4BD1 /* OpenWeatherAPI.swift in Sources */,
 				ECCA1ABA2B774D5400EB4BD1 /* WeatherData.swift in Sources */,
+				ECCA1ADB2B7B4B0B00EB4BD1 /* SearchView.swift in Sources */,
 				ECCA1AA32B7627A200EB4BD1 /* UIViewExtensions.swift in Sources */,
 				ECCA1AC42B77772A00EB4BD1 /* FiveDayTableViewCell.swift in Sources */,
 				ECCA1AB02B77465400EB4BD1 /* APIKey.swift in Sources */,

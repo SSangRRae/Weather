@@ -10,15 +10,23 @@ import UIKit
 class MainViewController: UIViewController {
     let mainView = MainView()
     
+    var cityID = "1835847"
+    
     override func loadView() {
         self.view = mainView
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = true
+        requestToOpenWeather(cityID: cityID)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureViews()
-        requestToOpenWeather()
     }
 }
 
@@ -108,13 +116,12 @@ extension MainViewController {
         mainView.tableView.register(LocationTableViewCell.self, forCellReuseIdentifier: "location")
         mainView.tableView.register(EtcTableViewCell.self, forCellReuseIdentifier: "etc")
         mainView.listButton.addTarget(self, action: #selector(listButtonClicked), for: .touchUpInside)
-        navigationController?.navigationBar.isHidden = true
     }
-    func requestToOpenWeather() {
+    func requestToOpenWeather(cityID: String) {
         let group = DispatchGroup()
         
         group.enter()
-        OpenWeatherManager.shared.fetchToOpenWeather(api: .now(cityID: "1835847"), type: WeatherInfo.self) { weatherInfo, error  in
+        OpenWeatherManager.shared.fetchToOpenWeather(api: .now(cityID: cityID), type: WeatherInfo.self) { weatherInfo, error  in
             if error == nil {
                 WeatherData.shared.nowWeather = weatherInfo
             } else {
@@ -128,7 +135,7 @@ extension MainViewController {
         }
         
         group.enter()
-        OpenWeatherManager.shared.fetchToOpenWeather(api: .forecast(cityID: "1835847"), type: ForecastWeatherInfo.self) { forecast, error  in
+        OpenWeatherManager.shared.fetchToOpenWeather(api: .forecast(cityID: cityID), type: ForecastWeatherInfo.self) { forecast, error  in
             if error == nil {
                 WeatherData.shared.forecastWeather = forecast
             } else {
@@ -148,16 +155,20 @@ extension MainViewController {
     }
     
     func etcData() {
+        var list: [String] = []
+        
         if let item = WeatherData.shared.nowWeather {
-            WeatherData.shared.etcData.append("\(item.wind.speed)m/s")
-            WeatherData.shared.etcData.append("\(item.clouds.all)%")
-            WeatherData.shared.etcData.append("\(item.main.pressure.formatted())hpa")
-            WeatherData.shared.etcData.append("\(item.main.humidity)%")
+            list.append("\(item.wind.speed)m/s")
+            list.append("\(item.clouds.all)%")
+            list.append("\(item.main.pressure.formatted())hpa")
+            list.append("\(item.main.humidity)%")
         }
         
+        WeatherData.shared.etcData = list
     }
     
     func fiveDayData() {
+        var tempList: [WeatherInfo] = []
         guard let data = WeatherData.shared.forecastWeather else {
             return
         }
@@ -167,13 +178,17 @@ extension MainViewController {
             }
             let hour = DateFunctions().dateTimeFormattingToHour(date)
             if hour == "00" {
-                WeatherData.shared.fiveDayWeather.append(list)
+                tempList.append(list)
             }
         }
+        WeatherData.shared.fiveDayWeather = tempList
     }
     
     @objc func listButtonClicked() {
         let vc = SearchViewController()
+        vc.pushData = { cityID in
+            self.cityID = cityID
+        }
         navigationController?.pushViewController(vc, animated: true)
     }
 }
