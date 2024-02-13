@@ -38,6 +38,7 @@
 		ECCA1ACC2B789EF200EB4BD1 /* EtcTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1ACB2B789EF200EB4BD1 /* EtcTableViewCell.swift */; };
 		ECCA1ACE2B789F8300EB4BD1 /* EtcCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1ACD2B789F8300EB4BD1 /* EtcCollectionViewCell.swift */; };
 		ECCA1AD12B78A7ED00EB4BD1 /* EtcSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AD02B78A7ED00EB4BD1 /* EtcSection.swift */; };
+		ECCA1AD72B7B463200EB4BD1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA1AD62B7B463200EB4BD1 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		ECCA1ACB2B789EF200EB4BD1 /* EtcTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcTableViewCell.swift; sourceTree = "<group>"; };
 		ECCA1ACD2B789F8300EB4BD1 /* EtcCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcCollectionViewCell.swift; sourceTree = "<group>"; };
 		ECCA1AD02B78A7ED00EB4BD1 /* EtcSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtcSection.swift; sourceTree = "<group>"; };
+		ECCA1AD62B7B463200EB4BD1 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				ECCA1AC22B77770900EB4BD1 /* FiveDay */,
 				ECCA1AC72B789BED00EB4BD1 /* Location */,
 				ECCA1ACA2B789EE300EB4BD1 /* Etc */,
+				ECCA1AD52B7B461700EB4BD1 /* Search */,
 				ECCA1A782B761CD600EB4BD1 /* AppDelegate.swift */,
 				ECCA1A7A2B761CD600EB4BD1 /* SceneDelegate.swift */,
 				ECCA1A812B761CD800EB4BD1 /* Assets.xcassets */,
@@ -219,6 +222,14 @@
 			path = Etc;
 			sourceTree = "<group>";
 		};
+		ECCA1AD52B7B461700EB4BD1 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA1AD62B7B463200EB4BD1 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -308,6 +319,7 @@
 				ECCA1AA72B762BB200EB4BD1 /* Protocols.swift in Sources */,
 				ECCA1ACC2B789EF200EB4BD1 /* EtcTableViewCell.swift in Sources */,
 				ECCA1A792B761CD600EB4BD1 /* AppDelegate.swift in Sources */,
+				ECCA1AD72B7B463200EB4BD1 /* SearchViewController.swift in Sources */,
 				ECCA1A9E2B76269700EB4BD1 /* FontDesign.swift in Sources */,
 				ECCA1A982B76243A00EB4BD1 /* MainSection.swift in Sources */,
 				ECCA1AC92B789C2300EB4BD1 /* LocationTableViewCell.swift in Sources */,

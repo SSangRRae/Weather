@@ -16,15 +16,8 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        mainView.tableView.delegate = self
-        mainView.tableView.dataSource = self
-        mainView.tableView.register(NowTableViewCell.self, forCellReuseIdentifier: "now")
-        mainView.tableView.register(ThreeTimeTableViewCell.self, forCellReuseIdentifier: "threeTime")
-        mainView.tableView.register(FiveDayTableViewCell.self, forCellReuseIdentifier: "fiveDay")
-        mainView.tableView.register(LocationTableViewCell.self, forCellReuseIdentifier: "location")
-        mainView.tableView.register(EtcTableViewCell.self, forCellReuseIdentifier: "etc")
         
+        configureViews()
         requestToOpenWeather()
     }
 }
@@ -106,6 +99,17 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
 }
 
 extension MainViewController {
+    func configureViews() {
+        mainView.tableView.delegate = self
+        mainView.tableView.dataSource = self
+        mainView.tableView.register(NowTableViewCell.self, forCellReuseIdentifier: "now")
+        mainView.tableView.register(ThreeTimeTableViewCell.self, forCellReuseIdentifier: "threeTime")
+        mainView.tableView.register(FiveDayTableViewCell.self, forCellReuseIdentifier: "fiveDay")
+        mainView.tableView.register(LocationTableViewCell.self, forCellReuseIdentifier: "location")
+        mainView.tableView.register(EtcTableViewCell.self, forCellReuseIdentifier: "etc")
+        mainView.listButton.addTarget(self, action: #selector(listButtonClicked), for: .touchUpInside)
+        navigationController?.navigationBar.isHidden = true
+    }
     func requestToOpenWeather() {
         let group = DispatchGroup()
         
@@ -166,5 +170,10 @@ extension MainViewController {
                 WeatherData.shared.fiveDayWeather.append(list)
             }
         }
+    }
+    
+    @objc func listButtonClicked() {
+        let vc = SearchViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
