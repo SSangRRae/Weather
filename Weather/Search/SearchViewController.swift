@@ -22,7 +22,32 @@ class SearchViewController: UIViewController {
         navigationItem.title = "City"
         searchView.tableView.delegate = self
         searchView.tableView.dataSource = self
+        searchView.searchBar.delegate = self
         CityData.shared.appendCityList()
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            CityData.shared.list = CityData.shared.originList
+            searchView.tableView.reloadData()
+            return
+        }
+        
+        var tempList: [City] = []
+        
+        for list in CityData.shared.originList {
+            if list.name.lowercased().contains(searchText.lowercased()) {
+                tempList.append(list)
+            }
+        }
+        CityData.shared.list = tempList
+        searchView.tableView.reloadData()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
     }
 }
 

@@ -11,6 +11,7 @@ class CityData {
     static let shared = CityData()
     private init() {}
     
+    var originList: [City] = []
     var list: [City] = []
     
     func appendCityList() {
@@ -18,8 +19,8 @@ class CityData {
             let jsonData = load(),
             let userList = try? JSONDecoder().decode([City].self, from: jsonData)
         else { return }
+        originList = userList
         list = userList
-        print(list)
     }
     
     func load() -> Data? {
